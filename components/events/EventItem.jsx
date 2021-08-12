@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import styles from './EventItem.module.css'
 
 const EventItem = ({ id, title, location, date, image }) => {
 
@@ -13,19 +14,22 @@ const EventItem = ({ id, title, location, date, image }) => {
    const formattedAddress = location.replace(', ', '/n')
   
    return (
-      <li>
+      <li className={styles.item}>
          <img src={`/${image}`} alt={title} />
-         <div>
-            <div>
+         <div className={styles.content}>
+            <div className={styles.summary}>
                <h2>{title}</h2>
-               <div>
+               <div className={styles.date}>
                   <time>{humanReadableDate(date)}</time>
                </div>
+               <div className={styles.address}>
                <address>{formattedAddress}</address>
+               </div>
+             
             </div>
          
-            <div>
-               <Link href={`events/${id}`}>View event</Link>
+            <div className={styles.actions}>
+               <Link href={`/events/${id}`}>View event</Link>
 
             </div>
          </div>
