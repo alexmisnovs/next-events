@@ -1,10 +1,9 @@
-
 const EventBySlug = () => {
-   return (
-      <div>
-         <h1>Filtered events</h1>
-      </div>
-   )
-}
+  return (
+    <>
+      <h1>Filtered events</h1>
+    </>
+  );
+};
 
-export default EventBySlug
+export default EventBySlug;

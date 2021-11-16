@@ -1,14 +1,12 @@
-import React from 'react'
-import MainHeader from './MainHeader'
-const Layout = (props) => {
+import React from "react";
+import MainHeader from "./MainHeader";
+const Layout = props => {
   return (
     <>
-    <MainHeader />
-      <main>
-        {props.children}
-      </main>
+      <MainHeader />
+      <main>{props.children}</main>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
