@@ -23,7 +23,9 @@ const EventsSearch = props => {
           <select ref={yearInput} id="year" onChange={props.handleChange}>
             <option value="">Select Year</option>
             <option value="2021">2021</option>
-            <option value="2022">2022</option>
+            <option selected value="2022">
+              2022
+            </option>
           </select>
         </div>
         <div className={styles.control}>

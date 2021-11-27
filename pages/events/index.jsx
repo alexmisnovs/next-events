@@ -6,19 +6,23 @@ import EventsSearch from "../../components/events/EventSearch";
 const EventsListPage = () => {
   const router = useRouter();
 
-  const onSearch = (year, month) => {
+  const findEventsHandler = (year, month) => {
     console.log(year);
 
     const fullPath = `/events/${year}/${month}`;
 
     router.push(fullPath);
   };
+  const events = getAllEvents();
   return (
-    <div>
-      <h1>List of all events</h1>
-      <EventsSearch onSearch={onSearch} />
-      <EventList items={getAllEvents()} />
-    </div>
+    <>
+      <div className="center">
+        <h1>List of all events</h1>
+      </div>
+
+      <EventsSearch onSearch={findEventsHandler} />
+      <EventList items={events} />
+    </>
   );
 };
 

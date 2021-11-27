@@ -72,19 +72,19 @@ export function getFilteredEvents(dateFilter) {
 }
 
 //get events in future from what user looked for. Or logical maybe add them from now?
-export function getAllEventsForSearhQueryFollowingMonths(dateFilter) {
-  const { year, month } = dateFilter;
-  let filteredEvents;
+// export function getAllEventsForSearhQueryFollowingMonths(dateFilter) {
+//   const { year, month } = dateFilter;
+//   let filteredEvents;
 
-  filteredEvents = DUMMY_EVENTS.filter(event => {
-    const eventDate = new Date(event.date);
-    return eventDate.getFullYear() === year && eventDate.getMonth() >= month - 1;
-  });
+//   filteredEvents = DUMMY_EVENTS.filter(event => {
+//     const eventDate = new Date(event.date);
+//     return eventDate.getFullYear() === year && eventDate.getMonth() >= month - 1;
+//   });
 
-  return filteredEvents;
-}
+//   return filteredEvents;
+// }
 export function getAllEventsForTheYear(dateFilter) {
-  const { year, month } = dateFilter;
+  const { year } = dateFilter;
   let filteredEvents;
 
   filteredEvents = DUMMY_EVENTS.filter(event => {
